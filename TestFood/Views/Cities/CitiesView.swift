@@ -6,38 +6,47 @@
 //
 
 import SwiftUI
+import Introspect
 
 struct CitiesView: View {
     @ObservedObject var viewModel = CitiesViewModel()
     
     var body: some View {
         NavigationView {
-            if viewModel.loaded {
-                
-                List {
+            VStack {
+                if viewModel.loaded {
                     
-                    BannerView(title:"Hungry? We deliver!",
-                               subtitle:"Tap here to select an address")
-                        .removePadding()
-                    
-                    Text("Nearby cities: ")
-                    
-                    if viewModel.model.cities.count > 0 {
-                        CitiesSlider(cities: Binding<[City]>(get: {return viewModel.model.cities }, set: { _ in }))
+                    List {
+                        
+                        BannerView(title:"Hungry? We deliver!",
+                                   subtitle:"Tap here to select an address")
                             .removePadding()
+                            .background(Color.white)
+                        
+                        if viewModel.model.cities.count > 0 {
+                            CitiesSlider(cities: Binding<[City]>(get: {return viewModel.model.cities }, set: { _ in }))
+                                .removePadding()
+                                .background(Color.white)
+                        }
+                        
+                        Image("cities-bottom")
+                            .resizable()
+                            .scaledToFit()
+                            .padding(20)
+                            .background(Color.white)
                     }
+                    .introspectTableView { $0.separatorStyle = .none }
+                    .styleList()
             
-                    Image("cities-bottom")
-                        .resizable()
-                        .scaledToFit()
-                        .padding(.horizontal, 20)
-                    
-                }.styleList()
-                .navigationBarTitle(Text(""), displayMode: .large)
-                .navigationBarItems(leading:DeindealHeader(),
-                                    trailing:CartImage())
-            }else{
-                ActivityIndicator(isAnimating: Binding<Bool>(get: {return true}, set: { _ in }), style: .large)
+                }else{
+                    ActivityIndicator(isAnimating: Binding<Bool>(get: {return true}, set: { _ in }), style: .large)
+                }
+            }
+            .navigationBarTitle(Text(""), displayMode: .large)
+            .navigationBarItems(leading:DeindealHeader(),
+                                trailing:CartImage())
+            .introspectViewController { vc in
+                vc.navigationController?.navigationBar.prefersLargeTitles = true
             }
         }
     }
@@ -50,21 +59,12 @@ struct DeindealHeader:View {
             Image("header-deindeal")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(height:56)
+                .frame(height:80)
+                .padding(.top, 50.0)
         }
     }
 }
 
-struct CartImage:View {
-    var body: some View {
-        HStack {
-            Image("header-cart")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(height:30)
-        }
-    }
-}
 
 struct CitiesView_Previews: PreviewProvider {
     static var previews: some View {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A05EEA8257426A0004F4464 /* CartImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEA7257426A0004F4464 /* CartImage.swift */; };
+		0A0E5A95257419DC008B1F4B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E5A94257419DC008B1F4B /* FoodView.swift */; };
 		0AA4ADFC2573EE74005B699B /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADFB2573EE74005B699B /* CitiesViewModel.swift */; };
 		0AA4ADFF2573EE82005B699B /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADFE2573EE82005B699B /* FoodViewModel.swift */; };
 		0AA4AE022573EEA1005B699B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4AE012573EEA1005B699B /* MainView.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A05EEA7257426A0004F4464 /* CartImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartImage.swift; sourceTree = "<group>"; };
+		0A0E5A94257419DC008B1F4B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		0AA4ADFB2573EE74005B699B /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		0AA4ADFE2573EE82005B699B /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
 		0AA4AE012573EEA1005B699B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A0E5A97257419E0008B1F4B /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				0A0E5A94257419DC008B1F4B /* FoodView.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
 		0AA4AE082574016F005B699B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0AA4AE052573FDE0005B699B /* BannerView.swift */,
+				0A05EEA7257426A0004F4464 /* CartImage.swift */,
 				0AA4AE1E25740AF0005B699B /* ActivityIndicator.swift */,
 				0AA4AE1125740522005B699B /* ScrollViewPager.swift */,
 			);
@@ -154,6 +167,7 @@
 			children = (
 				0AA4AE012573EEA1005B699B /* MainView.swift */,
 				0AA4AE1525740593005B699B /* Cities */,
+				0A0E5A97257419E0008B1F4B /* Food */,
 				0AA4AE102574050A005B699B /* Components */,
 			);
 			path = Views;
@@ -255,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A0E5A95257419DC008B1F4B /* FoodView.swift in Sources */,
+				0A05EEA8257426A0004F4464 /* CartImage.swift in Sources */,
 				0AA4ADFF2573EE82005B699B /* FoodViewModel.swift in Sources */,
 				0AFBAF872573E44F00750ADA /* AppDelegate.swift in Sources */,
 				0AA4ADFC2573EE74005B699B /* CitiesViewModel.swift in Sources */,

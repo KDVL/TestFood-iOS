@@ -6,40 +6,43 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct CitiesSlider: View{
     
     @Binding var cities:[City]
     
-    // @State var isActive = false
-    //  @State var item:City?
+    @State var isActive = false
+    @State var item:City?
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+        
+            Text("Nearby cities: ")
+                .font(.system(size: 20.0))
+                .padding(.top, 10)
+                .padding(.leading, 20)
+        
             ZStack {
                 
-                /* if item != nil {
-                 NavigationLink(destination: , isActive: self.$isActive){EmptyView()}.hidden()
-                 }*/
-                
-                CitiesSliderContent(cities: $cities)
-                
-                /*
-                 { city in
-                 self.item = city
-                 self.isActive = true
+                 if item != nil {
+                    NavigationLink(destination: FoodView(id: item!.id),
+                                   isActive: self.$isActive){EmptyView()}.hidden()
                  }
-                 
-                 */
+                
+                CitiesSliderContent(cities: $cities){
+                    self.item = $0
+                    self.isActive = true
+                }
             }
-        }.frame(maxWidth: .infinity, minHeight: 120)
+        }.frame(maxWidth: .infinity, minHeight: 160)
     }
 }
 
 struct CitiesSliderContent: View {
     @Binding var cities:[City]
     
-    //var onTapEvent:(City)->()
+    var onTap:(City)->()
     
     var body: some View {
         GeometryReader { g in
@@ -52,11 +55,14 @@ struct CitiesSliderContent: View {
                     
                     HStack(spacing: 0) {
                         ForEach(self.cities, id:\.id){ item in
-                            
-                            CitiesSliderItem(title: "GENEVE")
-                                .padding(.leading, 20)
+                            CitiesSliderItem(city: item)
+                                .onTapGesture {
+                                    self.onTap(item)
+                                }
+                                .padding(.horizontal, 10)
+                                
                         }
-                    }
+                    }.padding(.horizontal, 10)
                     
                 }.frame(width: g.size.width)
             }.frame(width: g.size.width, height: g.size.height)
@@ -66,15 +72,19 @@ struct CitiesSliderContent: View {
 
 
 struct CitiesSliderItem: View {
-    let title:String
-    //@ObservedObject var imageLoader:ImageLoader
+    let city:City
     
     var body: some View {
         
         ZStack {
             
-            Image("cities-bottom")
+            WebImage(url: URL(string: city.channelInfo.images.small))
                 .resizable()
+                .placeholder {
+                    Rectangle().foregroundColor(.gray)
+                }
+                .indicator(.activity)
+                .transition(.fade(duration: 0.5))
                 .aspectRatio(contentMode: .fill)
                 .frame(width: 182, height:100)
                 .clipped()
@@ -84,12 +94,11 @@ struct CitiesSliderItem: View {
                 VStack(alignment: .leading){
                     Spacer()
                     
-                    Text(title)
+                    Text(city.channelInfo.title.uppercased())
                         .font(.system(size: 20.0))
                         .foregroundColor(Color.white)
                         .padding(.horizontal, 8.0)
                         .padding(.vertical, 5)
-                        
                         .shadow(color: .black, radius: 3)
                 }
                 Spacer()
