@@ -1,3 +1,3 @@
 # TestFood-iOS
 
-Deindeal Test Food App
+Deindeal Test Food App Swift/SwiftUI
