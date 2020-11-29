@@ -20,9 +20,13 @@ class FoodAPI {
          
             if let json = data {
                 let response = try? JSONDecoder().decode(FoodResponse.self, from: json)
-                callback(response, error)
+                DispatchQueue.main.async {
+                    callback(response, error)
+                }
             }else {
-                callback(nil, error)
+                DispatchQueue.main.async {
+                    callback(nil, error)
+                }
             }
         })
         
