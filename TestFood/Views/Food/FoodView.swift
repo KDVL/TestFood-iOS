@@ -25,6 +25,10 @@ struct FoodView: View {
                                subtitle: "Tap here to change address")
                         .removePadding()
                     
+                    FoodFilters(viewModel: self.viewModel)
+                        .removePadding()
+                        .padding(.top, 20)
+                    
                     ForEach(self.viewModel.model?.items ?? [], id:\.id){ item in
                         FoodRow(item: item)
                             .removePadding()

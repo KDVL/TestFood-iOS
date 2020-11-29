@@ -103,8 +103,7 @@ struct CitiesSliderItem: View {
                 }
                 Spacer()
             }
-            
-        }.background(Color("teaserBackground"))
+        }
         
     }
 }

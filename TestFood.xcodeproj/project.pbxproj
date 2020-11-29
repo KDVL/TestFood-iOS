@@ -10,6 +10,8 @@
 		0A05EEA8257426A0004F4464 /* CartImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEA7257426A0004F4464 /* CartImage.swift */; };
 		0A05EEAB25742A02004F4464 /* FoodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEAA25742A02004F4464 /* FoodRow.swift */; };
 		0A05EEAE25743091004F4464 /* String+RemoveBraces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEAD25743090004F4464 /* String+RemoveBraces.swift */; };
+		0A05EEBA25743206004F4464 /* FoodFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEB925743206004F4464 /* FoodFilters.swift */; };
+		0A05EEBE2574345F004F4464 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 0A05EEBD2574345F004F4464 /* SDWebImageSVGCoder */; };
 		0A0E5A95257419DC008B1F4B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E5A94257419DC008B1F4B /* FoodView.swift */; };
 		0AA4ADFC2573EE74005B699B /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADFB2573EE74005B699B /* CitiesViewModel.swift */; };
 		0AA4ADFF2573EE82005B699B /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADFE2573EE82005B699B /* FoodViewModel.swift */; };
@@ -39,6 +41,7 @@
 		0A05EEA7257426A0004F4464 /* CartImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartImage.swift; sourceTree = "<group>"; };
 		0A05EEAA25742A02004F4464 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 		0A05EEAD25743090004F4464 /* String+RemoveBraces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveBraces.swift"; sourceTree = "<group>"; };
+		0A05EEB925743206004F4464 /* FoodFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFilters.swift; sourceTree = "<group>"; };
 		0A0E5A94257419DC008B1F4B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		0AA4ADFB2573EE74005B699B /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		0AA4ADFE2573EE82005B699B /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A05EEBE2574345F004F4464 /* SDWebImageSVGCoder in Frameworks */,
 				0AA4AE2725741020005B699B /* SDWebImageSwiftUI in Frameworks */,
 				0AA4AE232574100A005B699B /* Introspect in Frameworks */,
 			);
@@ -81,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				0A0E5A94257419DC008B1F4B /* FoodView.swift */,
+				0A05EEB925743206004F4464 /* FoodFilters.swift */,
 				0A05EEAA25742A02004F4464 /* FoodRow.swift */,
 			);
 			path = Food;
@@ -216,6 +221,7 @@
 			packageProductDependencies = (
 				0AA4AE222574100A005B699B /* Introspect */,
 				0AA4AE2625741020005B699B /* SDWebImageSwiftUI */,
+				0A05EEBD2574345F004F4464 /* SDWebImageSVGCoder */,
 			);
 			productName = TestFood;
 			productReference = 0AFBAF832573E44F00750ADA /* TestFood.app */;
@@ -247,6 +253,7 @@
 			packageReferences = (
 				0AA4AE212574100A005B699B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				0AA4AE2525741020005B699B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				0A05EEBC2574345F004F4464 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */,
 			);
 			productRefGroup = 0AFBAF842573E44F00750ADA /* Products */;
 			projectDirPath = "";
@@ -294,6 +301,7 @@
 				0AA4AE17257405A8005B699B /* CitiesSlider.swift in Sources */,
 				0AFBAFAC2573E6B100750ADA /* FoodResponse.swift in Sources */,
 				0AFBAF892573E44F00750ADA /* SceneDelegate.swift in Sources */,
+				0A05EEBA25743206004F4464 /* FoodFilters.swift in Sources */,
 				0AFBAF8B2573E44F00750ADA /* CitiesView.swift in Sources */,
 				0AA4AE1F25740AF1005B699B /* ActivityIndicator.swift in Sources */,
 			);
@@ -495,6 +503,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0A05EEBC2574345F004F4464 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSVGCoder.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.2;
+			};
+		};
 		0AA4AE212574100A005B699B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -514,6 +530,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0A05EEBD2574345F004F4464 /* SDWebImageSVGCoder */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A05EEBC2574345F004F4464 /* XCRemoteSwiftPackageReference "SDWebImageSVGCoder" */;
+			productName = SDWebImageSVGCoder;
+		};
 		0AA4AE222574100A005B699B /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0AA4AE212574100A005B699B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;

@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import SDWebImage
+import SDWebImageSVGCoder
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        ///Used to load svg images
+        SDImageCodersManager.shared.addCoder(SDImageSVGCoder.shared)
         return true
     }
 
