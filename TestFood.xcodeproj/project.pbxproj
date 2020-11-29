@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,8 @@
 		0AA4AE1225740522005B699B /* ScrollViewPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4AE1125740522005B699B /* ScrollViewPager.swift */; };
 		0AA4AE17257405A8005B699B /* CitiesSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4AE16257405A8005B699B /* CitiesSlider.swift */; };
 		0AA4AE1F25740AF1005B699B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4AE1E25740AF0005B699B /* ActivityIndicator.swift */; };
+		0AA4AE232574100A005B699B /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 0AA4AE222574100A005B699B /* Introspect */; };
+		0AA4AE2725741020005B699B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0AA4AE2625741020005B699B /* SDWebImageSwiftUI */; };
 		0AFBAF872573E44F00750ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBAF862573E44F00750ADA /* AppDelegate.swift */; };
 		0AFBAF892573E44F00750ADA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBAF882573E44F00750ADA /* SceneDelegate.swift */; };
 		0AFBAF8B2573E44F00750ADA /* CitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBAF8A2573E44F00750ADA /* CitiesView.swift */; };
@@ -59,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AA4AE2725741020005B699B /* SDWebImageSwiftUI in Frameworks */,
+				0AA4AE232574100A005B699B /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +193,10 @@
 			dependencies = (
 			);
 			name = TestFood;
+			packageProductDependencies = (
+				0AA4AE222574100A005B699B /* Introspect */,
+				0AA4AE2625741020005B699B /* SDWebImageSwiftUI */,
+			);
 			productName = TestFood;
 			productReference = 0AFBAF832573E44F00750ADA /* TestFood.app */;
 			productType = "com.apple.product-type.application";
@@ -216,6 +224,10 @@
 				Base,
 			);
 			mainGroup = 0AFBAF7A2573E44F00750ADA;
+			packageReferences = (
+				0AA4AE212574100A005B699B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				0AA4AE2525741020005B699B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 0AFBAF842573E44F00750ADA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -457,6 +469,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AA4AE212574100A005B699B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
+		0AA4AE2525741020005B699B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AA4AE222574100A005B699B /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AA4AE212574100A005B699B /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+		0AA4AE2625741020005B699B /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AA4AE2525741020005B699B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0AFBAF7B2573E44F00750ADA /* Project object */;
 }
