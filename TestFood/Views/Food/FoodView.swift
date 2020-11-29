@@ -28,7 +28,7 @@ struct FoodView: View {
                         
                         FoodFilters(viewModel: self.viewModel)
                             .removePadding()
-                            .padding(.top, 20)
+                            .padding(.vertical, 20)
                         
                         ForEach(self.viewModel.foodItems, id:\.id){ item in
                             FoodRow(item: item)

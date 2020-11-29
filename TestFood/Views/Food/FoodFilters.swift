@@ -70,7 +70,7 @@ struct FoodFiltersItem: View {
                 .background(selected ? Color.accentColor : Color.clear)
                 .cornerRadius(30)
             
-            text
+            text.padding(.top, -5)
         }
     }
 }
