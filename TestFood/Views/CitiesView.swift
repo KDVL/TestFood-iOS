@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CitiesView.swift
 //  TestFood
 //
 //  Created by Kevin Do Vale on 29.11.20.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct CitiesView: View {
     
     var body: some View {
         Text("Hello, world!")
@@ -15,8 +15,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CitiesView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        CitiesView()
     }
 }
