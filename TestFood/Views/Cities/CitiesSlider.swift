@@ -19,14 +19,14 @@ struct CitiesSlider: View{
         VStack(alignment: .leading) {
         
             Text("Nearby cities: ")
-                .font(.system(size: 20.0))
+                .font(.system(size: 20.0, weight: .light))
                 .padding(.top, 10)
                 .padding(.leading, 20)
         
             ZStack {
                 
                  if item != nil {
-                    NavigationLink(destination: FoodView(id: item!.id),
+                    NavigationLink(destination: FoodView(id: item!.id, cities: cities),
                                    isActive: self.$isActive){EmptyView()}.hidden()
                  }
                 

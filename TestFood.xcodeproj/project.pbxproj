@@ -12,6 +12,8 @@
 		0A05EEAE25743091004F4464 /* String+RemoveBraces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEAD25743090004F4464 /* String+RemoveBraces.swift */; };
 		0A05EEBA25743206004F4464 /* FoodFilters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEB925743206004F4464 /* FoodFilters.swift */; };
 		0A05EEBE2574345F004F4464 /* SDWebImageSVGCoder in Frameworks */ = {isa = PBXBuildFile; productRef = 0A05EEBD2574345F004F4464 /* SDWebImageSVGCoder */; };
+		0A05EEC12574404F004F4464 /* CitiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEC02574404F004F4464 /* CitiesListView.swift */; };
+		0A05EEC4257440EA004F4464 /* ModalHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A05EEC3257440EA004F4464 /* ModalHeader.swift */; };
 		0A0E5A95257419DC008B1F4B /* FoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0E5A94257419DC008B1F4B /* FoodView.swift */; };
 		0AA4ADFC2573EE74005B699B /* CitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADFB2573EE74005B699B /* CitiesViewModel.swift */; };
 		0AA4ADFF2573EE82005B699B /* FoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA4ADFE2573EE82005B699B /* FoodViewModel.swift */; };
@@ -42,6 +44,8 @@
 		0A05EEAA25742A02004F4464 /* FoodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRow.swift; sourceTree = "<group>"; };
 		0A05EEAD25743090004F4464 /* String+RemoveBraces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+RemoveBraces.swift"; sourceTree = "<group>"; };
 		0A05EEB925743206004F4464 /* FoodFilters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodFilters.swift; sourceTree = "<group>"; };
+		0A05EEC02574404F004F4464 /* CitiesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListView.swift; sourceTree = "<group>"; };
+		0A05EEC3257440EA004F4464 /* ModalHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalHeader.swift; sourceTree = "<group>"; };
 		0A0E5A94257419DC008B1F4B /* FoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodView.swift; sourceTree = "<group>"; };
 		0AA4ADFB2573EE74005B699B /* CitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewModel.swift; sourceTree = "<group>"; };
 		0AA4ADFE2573EE82005B699B /* FoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewModel.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 				0A0E5A94257419DC008B1F4B /* FoodView.swift */,
 				0A05EEB925743206004F4464 /* FoodFilters.swift */,
 				0A05EEAA25742A02004F4464 /* FoodRow.swift */,
+				0A05EEC02574404F004F4464 /* CitiesListView.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			children = (
 				0AA4AE052573FDE0005B699B /* BannerView.swift */,
 				0A05EEA7257426A0004F4464 /* CartImage.swift */,
+				0A05EEC3257440EA004F4464 /* ModalHeader.swift */,
 				0AA4AE1E25740AF0005B699B /* ActivityIndicator.swift */,
 				0AA4AE1125740522005B699B /* ScrollViewPager.swift */,
 			);
@@ -283,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0E5A95257419DC008B1F4B /* FoodView.swift in Sources */,
+				0A05EEC12574404F004F4464 /* CitiesListView.swift in Sources */,
+				0A05EEC4257440EA004F4464 /* ModalHeader.swift in Sources */,
 				0A05EEA8257426A0004F4464 /* CartImage.swift in Sources */,
 				0AA4ADFF2573EE82005B699B /* FoodViewModel.swift in Sources */,
 				0AFBAF872573E44F00750ADA /* AppDelegate.swift in Sources */,

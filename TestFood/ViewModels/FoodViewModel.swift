@@ -8,16 +8,21 @@
 import Foundation
 
 class FoodViewModel: ObservableObject {
-    private let id:String
+    private(set) var id:String
     @Published var model:FoodResponse? = nil
     @Published private(set) var loaded = false
     @Published private(set) var filter:FacetCategory? = nil
     
     var foodItems:[FoodItem] { get { filtredItems() }}
-    
-    
+
     init(id:String){
         self.id = id
+        load(id: id)
+    }
+    
+    func reload(id:String){
+        self.id = id
+        self.filter = nil
         load(id: id)
     }
 
