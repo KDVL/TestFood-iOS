@@ -20,18 +20,24 @@ struct FoodView: View {
         VStack {
             
             if viewModel.loaded {
-                List {
-                    BannerView(title:viewModel.model?.name ?? "",
-                               subtitle: "Tap here to change address")
-                        .removePadding()
-                    
-                    FoodFilters(viewModel: self.viewModel)
-                        .removePadding()
-                        .padding(.top, 20)
-                    
-                    ForEach(self.viewModel.model?.items ?? [], id:\.id){ item in
-                        FoodRow(item: item)
+                ZStack {
+                    List {
+                        BannerView(title:viewModel.model?.name ?? "",
+                                   subtitle: "Tap here to change address")
                             .removePadding()
+                        
+                        FoodFilters(viewModel: self.viewModel)
+                            .removePadding()
+                            .padding(.top, 20)
+                        
+                        ForEach(self.viewModel.foodItems, id:\.id){ item in
+                            FoodRow(item: item)
+                                .removePadding()
+                        }
+                    }
+                    
+                    if viewModel.foodItems.count == 0 {
+                        Text("No results for this filter")
                     }
                 }
                 

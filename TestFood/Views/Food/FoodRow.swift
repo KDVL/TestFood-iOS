@@ -46,6 +46,6 @@ struct FoodRow: View {
 
 struct FoodRow_Previews: PreviewProvider {
     static var previews: some View {
-        FoodRow(item: FoodItem(id: 1, title: "Titre", subtitle: "subtitle", images: FoodImages(cover: ""), myThemes: []))
+        FoodRow(item: FoodItem(id: 1, title: "Titre", subtitle: "subtitle", images: FoodImages(cover: ""), themes: []))
     }
 }

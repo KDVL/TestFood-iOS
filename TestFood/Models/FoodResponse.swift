@@ -27,7 +27,7 @@ struct FacetCategory: Codable {
     let icon: String
     let isPopular: Bool
     let count: Int
-    let selected: Bool
+    var selected: Bool
 }
 
 // MARK: - I18N
@@ -68,7 +68,12 @@ struct FoodItem: Codable {
     let id: Int
     let title, subtitle: String
     let images: FoodImages
-    let myThemes: [String]
+    let themes: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case themes = "myThemes"
+        case images, id, title, subtitle
+    }
 }
 
 // MARK: - FoodImages
