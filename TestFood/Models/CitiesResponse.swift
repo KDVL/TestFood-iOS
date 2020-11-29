@@ -21,23 +21,10 @@ struct City: Codable {
 // MARK: - ChannelInfo
 struct ChannelInfo: Codable {
     let title: String
-    let mapInfo: MapInfo
-    let isDefault, excludeFromSubscription: Bool
     let images: Images
 }
 
 // MARK: - Images
 struct Images: Codable {
     let small, large: String
-}
-
-// MARK: - MapInfo
-struct MapInfo: Codable {
-    let geolocation: Geolocation
-    let zoom: Int
-}
-
-// MARK: - Geolocation
-struct Geolocation: Codable {
-    let latitude, longitude: Double
 }
