@@ -11,7 +11,7 @@ import Foundation
 // MARK: - FoodResponse
 struct FoodResponse: Codable {
     let id, name: String
-    let items: [Item]
+    let items: [FoodItem]
     let facetCategories: [FacetCategory]
     let i18N: I18N
 
@@ -64,7 +64,7 @@ struct Timer: Codable {
 }
 
 // MARK: - Item
-struct Item: Codable {
+struct FoodItem: Codable {
     let id: Int
     let title, subtitle: String
     let images: FoodImages

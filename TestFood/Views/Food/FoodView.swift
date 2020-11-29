@@ -21,9 +21,14 @@ struct FoodView: View {
             
             if viewModel.loaded {
                 List {
-                    BannerView(title:id.capitalized, subtitle: "Tap here to change address")
+                    BannerView(title:viewModel.model?.name ?? "",
+                               subtitle: "Tap here to change address")
                         .removePadding()
                     
+                    ForEach(self.viewModel.model?.items ?? [], id:\.id){ item in
+                        FoodRow(item: item)
+                            .removePadding()
+                    }
                 }
                 
             }else{
@@ -31,7 +36,7 @@ struct FoodView: View {
             }
     
         }
-        .navigationBarTitle(Text(id.capitalized), displayMode: .inline)
+        .navigationBarTitle(Text(viewModel.model?.name ?? ""), displayMode: .inline)
         .navigationBarItems(trailing:CartImage())
     }
 }

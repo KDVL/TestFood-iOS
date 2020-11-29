@@ -14,10 +14,10 @@ class FoodViewModel: ObservableObject {
     
     init(id:String){
         self.id = id
-        load()
+        load(id: id)
     }
 
-    private func load(){
+    private func load(id:String){
         FoodAPI.getFood(id: self.id) { (response, error) in
             if let model = response {
                 
